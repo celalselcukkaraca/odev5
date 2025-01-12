@@ -1,22 +1,13 @@
 package com.rd;
 
 public class Personel {
-    String isim;
-    private int gunlukUcret;
+    private int calismaGun;
 
-    public Personel(String isim, int gunlukUcret) {
-        this.isim = isim;
-        this.gunlukUcret = gunlukUcret;
+    public Personel(int calismaGun) {
+        this.calismaGun = calismaGun;
     }
 
-    public int maasHesapla(int calisilanGun) {
-        // Temel maaş hesaplama
-        int maas = gunlukUcret * calisilanGun;
-
-        // Prim hesaplama (üçlü operatör kullanımı)
-        int prim = (calisilanGun > 25) ? (calisilanGun - 25) * 1000 : 0;
-
-        // Toplam maaş
-        return maas + prim;
+    public int getCalismaGun() {
+        return calismaGun;
     }
 }
